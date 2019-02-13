@@ -22,5 +22,6 @@ phases:
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
       - echo "[{\"name\":\"${ECS_CLUSTER_NAME}\",\"imageUri\":\"${REPOSITORY_URI}:latest\"}]" > imagedefinitions.json
+      - echo ${ECS_CLUSTER_NAME}
 artifacts:
     files: imagedefinitions.json
